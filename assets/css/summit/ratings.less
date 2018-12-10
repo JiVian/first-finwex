@@ -1,0 +1,97 @@
+@import "../variables";
+.container{
+@media screen and (max-width:@device-width-mobile){
+  width:100%;
+  .banner {
+      background: url("/images/labs/banner_bg.jpg") no-repeat;
+      background-size: cover;
+      width:100%;
+      min-width:0;
+      height:10rem;
+      padding-top:1rem;
+      .banner-con{
+        width:100%;
+        h1{
+          font-size: 30px;
+          margin-top: 0;
+          font-weight:550;
+        }
+        p{
+          width:80%;
+          font-size: 0.3rem;
+          line-height: 0.5rem;
+        }
+        img{
+          width:7rem;
+          top:19px;
+        }
+      }
+  }
+  .content{
+    width:100%;
+    padding:50px 0;
+    .about_title{
+      img{
+        width:38px;
+        bottom:6px;
+      }
+      h2{
+        font-size:22px;
+        font-weight:550;
+      }
+      >div{
+        margin-right:10px;
+        margin-left:10px;
+      }
+      span{
+        font-size:0.3rem;
+      }
+      &.title2{
+        margin-top:0;
+      }
+    }
+    .about_row,.about_rowEn{
+      width:96%;
+      margin-left:8px;
+      .row11{
+        width:3rem;
+        height:9rem;
+        img{
+          width:3rem;
+        }
+        .font{
+          width:3rem;
+        }
+      }
+    }
+    .about_rowEn{
+      .row11{
+        height:11rem;
+      }
+      .font{
+        span{
+          line-height:13px;
+        }
+      }
+    }
+    .about_center{
+      width:97%;
+      div{
+        width:3rem;
+        height:9rem;
+        img{
+          width:3rem;
+        }
+        .font{
+          h3{
+            font-size:.3rem;
+          }
+          p{
+            font-size:.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+}

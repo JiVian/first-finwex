@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no">
+  <title>FinWex Activity</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/media50px.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/layer.m.js"></script>
+</head>
+
+<body>
+<div class="header">
+  <img src="images/m-home-bg.png" class="banner" />
+  <a href="http://www.huodongxing.com/event/3448362536800?coupon=5eajNn1" class="btn-buy-ticket"></a>
+</div>
+
+<ul class="list mobile">
+  <li class="block1">
+    <div class="input-group"><input placeholder="请输入您的活动行票号"></input><a class="input-group-btn lukyBtn">参与抽奖</a></div>
+    <a href="http://www.huodongxing.com/event/3448362536800?coupon=5eajNn1" class="use-ticket"></a>
+  </li>
+  <li class="block2">
+
+  </li>
+  <li class="block3">
+    <a href="https://finwex.com/summit/" class="btn-iknow"></a>
+  </li>
+</ul>
+
+<div class="pc">
+  <ul class="gift clearfix">
+    <li class="gift-item"><img src="images/first.png"/></li>
+    <li class="gift-item"><img src="images/second.png"/></li>
+    <li class="gift-item"><img src="images/third.png"/></li>
+  </ul>
+  <div class="pc-block1">
+    <div class="input-group"><input id='input' placeholder="请输入您的活动行票号"></input><a id='lukyBtn' class="input-group-btn lukyBtn">参与抽奖</a></div>
+    <a href="http://www.huodongxing.com/event/3448362536800?coupon=5eajNn1" class="use-ticket"></a>
+  </div>
+  <div class="pc-block2">
+    <h3>规则详情</h3>
+    <p>1、 用户只有在“finwise1周年”活动中购买的门票才能参加抽奖活动。<br/>
+      2、 购票后生成的活动行门票兑换码，就是参与活动的抽奖号码。<br/>
+      3、 用户需要手动在活动页面（www.finwex.com/summit）输入兑换码，系统会提示参与抽奖成功。<br/>
+      4、 每个人都可以通过邀请好友购票的方式获得额外的抽奖机会，每邀请3个好友将额外获得一次抽奖机会，邀请名额不设上限。好友购票时需在邀请码一栏输入你的兑换码，系统就会自动登记邀请成功。<br/>
+      5、 由于本次活动中全部的票务收入都将用来购买奖品，因而参与本次活动的所有门票将不接受退票。<br/>
+      6、 为保证本次活动公开透明，所有参与的购票的用户都可以添加运营人员微信进入抽奖信息公开群，一起讨论。<br/>
+      7、 我们将在周年庆活动结束当天，即2018年7月27日下午开奖。<br/>
+      8、 活动的最终解释权归主办方所有。</p>
+  </div>
+  <div class="pc-block3">
+    <a href="https://finwex.com/summit/" class="btn-iknow"></a>
+
+  </div>
+</div>
+
+<div id="cjbox" style="display:none;">
+  <div class="cjbox">
+    <a href="javascript:;" class="close"></a>
+    <a href="javascript:;" class="qr-code"></a>
+    <a href="#" class="share-btn"  id="shareBtn"></a>
+    <div class="bdsharebuttonbox">
+      <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+      <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+      <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+      <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">百度贴吧</a>
+      <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a>
+      <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter">Twitter</a>
+      <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook">Facebook</a>
+      <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址">复制网址</a>
+    </div>
+  </div>
+</div>
+<div class="mask" id="mask">
+</div>
+
+
+<div class="access-window" id="accessWindow">
+  <a href="javascript:;" class="close"></a>
+  <a href="https://www.finwex.com/summit/anniversary/" class="lottery-btn"></a>
+  <a href="http://www.huodongxing.com/event/3448362536800?coupon=5eajNn1" class="buy-ticket-btn"></a>
+  <a href="http://www.huodongxing.com/event/3448362536800?coupon=5eajNn1" class="get-ticket-btn"></a>
+
+
+</div>
+<a class="float-btn" id="floatBtn"></a>
+
+<script>
+
+  $(function() {
+    $("#lukyBtn").click(function() {
+      var val = $("#input").val();
+      $.get("/api/ticket_number", { ticket_number: val }, function(data) {
+        // alert(data)
+      });
+    });
+  });
+
+  $(".lukyBtn").click(function() {
+    $("#cjbox").show();
+
+  });
+  $("#cjbox .close").click(function() {
+    $("#cjbox").hide();
+
+  });
+  $("#shareBtn").click(function() {
+    $("#mask").show();
+
+  });
+  $("#mask").click(function(){
+    $("#mask").hide();
+  })
+  $("#accessWindow .close").click(function(){
+    $("#accessWindow").hide();
+    $("#floatBtn").show();
+  })
+  $("#floatBtn").click(function(){
+    $("#accessWindow").show();
+    $("#floatBtn").hide();
+  })
+  window._bd_share_config = {
+    "common": {
+      "bdSnsKey": {},
+      "bdText": "我参与了finwise周年活动，快来帮我领奖吧！",
+      "bdMini": "2",
+      "bdMiniList": false,
+      "bdPic": "https://finwex.com/activity/images/activity-window.jpg",
+      "bdStyle": "1",
+      "bdSize": "24"
+    },
+    "share": { "bdSize": 16 }
+  };
+  with (document) 0[(getElementsByTagName("head")[0] || body).appendChild(createElement("script")).src = "./static/api/js/share.js?v=89860593.js?cdnversion=" + ~(-new Date() / 36e5)];
+
+</script>
+</body>
+
+</html>

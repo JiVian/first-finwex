@@ -1,0 +1,40 @@
+//导入数据js
+const Router = require('koa-router')
+const home = require('./controllers/home')
+const about = require('./controllers/about')
+const ratings = require('./controllers/ratings')
+const news = require('./controllers/news')
+const partner = require('./controllers/partner')
+const photo = require('./controllers/photo')
+const submitData = require('./controllers/submit')
+const router = new Router({ prefix: '/api' })
+// const router = new Router()
+
+router.get('/banner_index', home.banner_index)
+router.get('/index', home.index)
+router.get('/about_index', home.about_index)
+
+router.get('/about_ratings', home.about_index)
+router.get('/ex_ratings/list', home.about_index)
+router.get('/project_ratings/', home.about_index)
+
+router.get('/f20_hour_index', home.f20_hour_index)
+router.get('/composite_hour_index', home.composite_hour_index)
+router.get('/composite_chart', home.composite_chart)
+router.get('/composite_data', home.composite_data)
+router.get('/f20_chart', home.f20_chart)
+router.get('/f20_data', home.f20_data)
+
+router.get('/about/', home.about_index)
+router.get('/calendar/',home.get_calendar)
+router.get('/personnel/', about.get_personnel)
+router.get('/partner/', partner.get_partner)
+router.get('/photo/', photo.get_photo)
+router.get('/ratings/', ratings.get_ratings)
+router.get('/white_paper/', home.get_white_paper)
+router.get('/ticket_number/', home.ticket_number)
+router.get('/news/', news.getNews)
+router.get('/newsDetail/', news.getDetail)
+
+router.post('/submit',submitData.insert_data)
+module.exports = router

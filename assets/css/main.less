@@ -1,0 +1,15 @@
+@import "variables.less";
+
+@import "./layout/header.less";
+@import "./layout/footer.less";
+@import "./layout/content.less";
+
+body {
+  font-family: @main-font;
+  // 避免由于 document.documentElement.style.fontSize 被赋值后
+  // 桌面端字体大小混乱引发内联元素错位
+  font-size: 16px;
+  // 重制移动端页面 Tap 后背景高亮颜色
+  //-webkit-tap-highlight-color: rgba(0,0,0,0);
+  background-color: #fff;
+}

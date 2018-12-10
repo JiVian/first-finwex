@@ -1,0 +1,1222 @@
+@import "./variables.less";
+#finwex{
+  .contact-methods {
+    border: none;
+  }
+}
+
+//PC端
+.container{
+  .layout-index{
+    .nav-header{
+      width:1200px !important;
+    }
+    
+  }
+  .pc{
+    display: block;
+  }
+  .mb{
+    display:none;
+  }
+  //轮播图动画样式
+  .my-swiper {
+  height: 550px;
+  width: 100%;
+  .swiper-wrapper {
+    height: 550px;
+  }
+  .swiper-slide {
+    display: flex;
+    overflow: hidden;
+    // 居中显示
+    justify-content: center;
+
+    .swiper-img {
+      // 宽度 自动按比例(同高度的比例)缩放
+      width: auto;
+      height:550px;
+    }
+    .h2-fa{
+      position: relative;
+    }
+    h2{
+      font-family: Helvetica Neue;
+      font-size:18px;
+      letter-spacing: 3px;
+      color:#fff;
+      position: absolute;
+      top:52%;
+    }
+    .h2En{
+      font-family: Helvetica Neue;
+      width:650px;
+      font-size:20px;
+      font-weight: 200;
+      color:rgba(255,255,255,.7);
+      line-height: 26px;
+      text-align: center;
+      letter-spacing: 0;
+      top:55%;
+    }
+  }
+  .swiper-pagination {
+    // 覆盖 js 添加的内联样式 width
+    width: 100% !important;
+
+    // Styles for indicators
+    > .swiper-pagination-bullet {
+      width: 30px;
+      height: 6px;
+      border-radius: 0;
+      transition: all 0.6s;
+      background: rgba(255, 255, 255, 0.31);
+      cursor: pointer;
+      // <style lang="less" scoped> 下此条样式不会生效, 因为没有 [data-xxxxx] 属性
+      &.swiper-pagination-bullet-active {
+        background: #ffffff;
+      }
+    }
+    > .swiper-pagination-bullet:hover {
+      transform: scale(1.8);
+      height: 15px;
+      background-color: rgba(20, 200, 200, 0.8);
+    }
+  }
+  }
+  .fr-index{
+    height:320px;
+    width:1200px;
+    margin:30px auto;
+    .fr-title,.fr-titleEn{
+      h2{
+        display:inline-block;
+        font-size:24px;
+        font-weight:@font-weight-semibold;
+      }
+      .more-index{
+        display:block;
+        float:right;
+        width:125px;
+        height:20px;
+        position:relative;
+        text-decoration: none;
+        margin-top:5px;
+        background-color: #EAEAEA;
+        p{
+          display:inline-block;
+          width:75px;
+          height:15px;
+          background-color: #EAEAEA;
+          font-size:12px;
+          padding-top:5px;
+          text-align: center;
+          vertical-align:bottom;
+          list-style: none;
+          text-decoration: none;
+        }
+        .more-bg{
+          width:42px;
+          height:20px;
+          vertical-align: bottom;
+          float:right;
+        }
+      }
+      .more-index,a:visited{
+        color:black;
+      }
+      .more-index,a:active{
+        color:black;
+      }
+      .more-index::after{
+        content:"";
+        width:980px;
+        height:2px;
+        background-color:#EAEAEA;
+        position:absolute;
+        right:120px;
+        bottom:0;
+      }
+
+    }
+    .fr-titleEn{
+      .more-index::after{
+        width:900px;
+      }
+    }
+    .index-number{
+      display:flex;
+      height:260px;
+      margin-top:10px;
+      .up{
+        display:inline-block;
+        width:130px;
+        padding-left:10px;
+        background:url("/images/Finwex-index/arrow5.png") no-repeat;
+        background-position:right;
+        background-size:9px;
+        color:#2DCB6A;
+      }
+      .down{
+        display:inline-block;
+        width:130px;
+        padding-left:10px;
+        background:url("/images/Finwex-index/arrow7.png") no-repeat;
+        background-position:right;
+        background-size:9px;
+        color:#E73232;
+      }
+
+      .index-num1{
+        flex:2;
+        .num1{
+          height:48px;
+          width:226px;
+          color:#484A4F;
+          padding:20px;
+          font-weight:@font-weight-bold;
+          font-size:14px;
+          cursor: pointer;
+          h3{
+            padding-bottom:10px;
+          }
+        }
+        .num1:hover{
+          background-color:#eee;
+        }
+        .num3{
+          height:48px;
+          width:224px;
+          color:#484A4F;
+          padding:18px;
+          font-weight:@font-weight-bold;
+          font-size:14px;
+          cursor: pointer;
+          h3{
+            padding-bottom:10px;
+          }
+          .num22{
+            .arrow{
+              display:inline-block;
+              width:130px;
+              padding-left:10px;
+              background:url("/images/Finwex-index/arrow7.png") no-repeat;
+              background-position:right;
+              background-size:9px;
+              color:#E73232;
+            }
+          }
+        }
+        .num3:hover{
+          background-color:#eee;
+        }
+        //鼠标点击的效果
+        .num2{
+          height:48px;
+          width:224px;
+          background-color:#2A2929 !important;
+          border-left:6px solid #F12C8D;
+          color:#fff;
+          padding:18px;
+          font-weight:@font-weight-bold;
+          font-size:14px;
+          cursor: pointer;
+          h3{
+            padding-bottom:10px;
+          }
+          .num22{
+            //.arrow{
+            //  display:inline-block;
+            //  width:122px;
+            //  padding-left:10px;
+            //  background:url("/images/Finwex-index/arrow7.png") no-repeat;
+            //  background-position:right;
+            //  background-size:9px;
+            //  color:#E73232;
+            //}
+          }
+        }
+      }
+      .index-chart{
+        flex:6;
+        // 覆盖图表组件内部样式
+        .echarts {
+          width: 900px;
+          height: 200px;
+        }
+      }
+    }
+  }
+  .plan{
+    background-color: rgba(42,41,41,0.04);
+    text-align: center;
+    padding:50px 0 44px 0;
+    color:#272E44;
+    margin-bottom: 25px;
+    h2{
+      font-size:24px;
+      font-weight:600;
+    }
+    .calendar{
+      display:flex;
+      padding-right:117px;
+      width:1308px;
+      margin:40px auto;
+      justify-content: center;
+      img{
+        height:453px;
+      }
+      .plan-activity{
+        width:440px;
+        height:345px;
+        background-color:#fff;
+        //margin-left:-13px;
+        display:flex;
+        flex-direction:column;
+        text-align: left;
+        padding:32px;
+        box-shadow: 0 2px 14px 0 rgba(0,0,0,0.20);
+        position: relative;
+        h2{
+          font-size:14px;
+          line-height:20px;
+        }
+        .plan-wrapper {
+          height: 320px;
+          overflow-y: auto;
+        }
+        .top-wrap{
+          p{
+            font-size:12px;
+            line-height:20px;
+          }
+        }
+      }
+      .plan-activity::after{
+        content:"";
+        width:127px;
+        height:402px;
+        background: url("/images/Finwex-index/Event.png") no-repeat;
+        position: absolute;
+        right:-118px;
+        bottom:9px;
+        z-index:-1;
+      }
+      .cal-wrapper{
+        box-shadow: 2px 2px 4px #ccc;
+      }
+      .events-wrapper{
+        display:none;
+      }
+      .today1{
+        flex:1;
+        //border-bottom:1px solid rgba(42,41,41,0.40);
+        position: relative;
+      }
+      .today1::after{
+        content:'';
+        width:375px;
+        height:2px;
+        background-color:rgba(42,41,41,0.40);
+        position: absolute;
+        left:0;
+        bottom:0;
+      }
+      .popular{
+        flex:4;
+        position: relative;
+        padding-top:5px;
+        p{
+          line-height:20px;
+          font-size:12px;
+        }
+      }
+      .contact{
+        flex:2;
+        padding-top:5px;
+        position: relative;
+        h2{
+          display:inline-block;
+        }
+        span{
+          font-size:14px;
+          padding-left:8px;
+          font-weight:200;
+        }
+      }
+      .contact::before{
+        content:'';
+        width:375px;
+        height:2px;
+        background-color:rgba(42,41,41,0.40);
+        position: absolute;
+        left:0;
+        top:0px;
+      }
+      .top-wrap,.popular,.contact{
+        .line{
+          padding:15px;
+          margin-left:5px;
+          width:310px;
+          position: relative;
+        }
+        .line::before{
+          content:'';
+          width:10px;
+          height:10px;
+          border-radius:50%;
+          background-color:#F12C8D;
+          position: absolute;
+          left:0;
+          top:17px;
+        }
+      }
+      .today1{
+        .line{
+          padding:20px;
+          margin-left:5px;
+          width:310px;
+          position: relative;
+        }
+        .line::before{
+          content:'';
+          width:10px;
+          height:10px;
+          border-radius:50%;
+          background-color:#F12C8D;
+          position: absolute;
+          left:0;
+          top:25px;
+        }
+      }
+      .popular,.contact{
+        .line{
+          padding:12px;
+          padding-left:20px;
+          padding-bottom:5px;
+        }
+      }
+    }
+  }
+  .new,.newEn{
+    width:1200px;
+    margin:0 auto;
+    .fr-title{
+      h2{
+        display:inline-block;
+        font-size:24px;
+        font-weight:@font-weight-semibold;
+      }
+      .more-index{
+        display:block;
+        list-style: none;
+        color:black;
+        float:right;
+        width:130px;
+        height:20px;
+        position:relative;
+        text-decoration: none;
+        margin-top:5px;
+        background-color: #EAEAEA;
+        span{
+          display:inline-block;
+          width:75px;
+          height:15px;
+          background-color: #EAEAEA;
+          font-size:12px;
+          padding-top:5px;
+          text-align: center;
+          vertical-align:bottom;
+        }
+        .more-bg{
+          width:42px;
+          height:20px;
+          vertical-align: bottom;
+          float:right;
+        }
+      }
+      a:visited{
+        color:black;
+      }
+      a:active{
+        color:black;
+      }
+      .more-index::after{
+        content:"";
+        width:980px;
+        height:2px;
+        background-color:#EAEAEA;
+        position:absolute;
+        right:120px;
+        bottom:0;
+      }
+
+    }
+    .new-Sum{
+      display:flex;
+      flex-wrap:wrap;
+      margin:60px auto;
+      margin-left:30px;
+      .new-des{
+        width:360px;
+        height:500px;
+        background-color: #fff;
+        margin-right:30px;
+        box-shadow: 2px 5px 5px rgba(0,0,0,0.10);
+        text-decoration: none;
+        img{
+          width:360px;
+          height:250px;
+        }
+        .new-detail{
+          width:316px;
+          margin:30px auto;
+          h3{
+            font-size:18px;
+            color:#3F4147;
+            font-weight:550;
+            line-height:25px;
+            position: relative;
+            margin: 1%;    /*决定省略号在文本尾部的位置*/
+            height: 52px;       /*此处高度决定了显示几行*/
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          h3::after{
+            bottom: 0;
+            content: "";
+            padding: 0 -40px 0 0;
+            position: absolute;
+          }
+          span{
+            font-size:14px;
+            color: rgba(63,65,71,0.50);
+            line-height:50px;
+            position: relative;
+          }
+          span::before{
+            content:"";
+            width:60px;
+            height:2px;
+            background-color: #F12C8D;
+            position: absolute;
+            left:0;
+            bottom:-10px;
+          }
+          .des1{
+            font-size:14px;
+            color: #3F4147;
+            font-weight:250;
+            line-height:20px;
+            text-decoration: none;
+            p{
+              height:60px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              }
+          }
+          a{
+            display:block;
+            margin:20px 0;
+            font-size:12px;
+            text-decoration: none;
+            color:#2A2929;
+            font-weight:500;
+          }
+        }
+      }
+      .new-des:hover{
+        transition: all 2s;
+        transform:translateY(-5px);
+        box-shadow: 5px 7px 8px rgba(0,0,0,0.10);
+      }
+    }
+
+  }
+  .newEn{
+    .fr-title .more-index::after{
+      width:900px;
+    }
+    .new-Sum{
+      .new-des{
+        .new-detail{
+          h3{
+            line-height:20px;
+            height: 62px; 
+          }
+          .des1{
+            height: 49px;
+            line-height:16px;
+            p{
+              height: 49px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .partner{
+    margin:0 auto;
+    width:100%;
+    height:126px;
+    text-align:center;
+    padding:50px 0;
+    position:relative;
+    background: rgba(42,41,41,0.04);
+    h2{
+      font-size: 24px;
+      color: #2A2929;
+      font-weight:550;
+    }
+    ul{
+      display:flex;
+      width:899px;
+      height:62px;
+      margin:23px auto;
+      li{
+        width:160px;
+        height:60px;
+        margin:0 10px;
+        color: #2A2929;
+        a{
+          display:inline-block;
+          width:100%;
+          height:100%;
+          img{
+            width:160px;
+
+          }
+        }
+      }
+    }
+  }
+  .calendar-new{
+    &.__vev_calendar-wrapper{
+      width:468px;
+      margin:0;
+      box-shadow: 0 2px 14px 0 rgba(0, 0, 0, .2);
+      z-index:999;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper{
+      //width:70%;
+      padding:0;
+      width:468px;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .weeks{
+      font-size:16px;
+      color:#A0A0A0;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num{
+      font-size:16px;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item{
+      width:66px;
+      height:50px;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .weeks .item{
+      width:14%;
+      text-align: left;
+      padding-left: 5px
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num{
+      height: 35px;
+      width:35px;
+      top: 6px;
+      left: 2px;
+      line-height: 37px;
+    }
+    .selected-day>p{
+      height: 35px !important;
+      width:35px !important;
+      top: 6px;
+      left: 2px;
+      line-height: 37px;
+      background-color: #F12C8D !important;
+      border-radius:50% !important;
+      color:#fff !important;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num:hover{
+      cursor: pointer;
+      height: 35px;
+      width:35px;
+      top: 6px;
+      left: 2px;
+      line-height: 37px;
+      background-color: #F12C8D !important;
+      border-radius:50% !important;
+      color:#fff !important;
+    }
+    .activeCad{
+      height: 35px;
+      width:35px;
+      // top: 6px;
+      // left: 2px;
+      line-height: 37px;
+      background-color: #fff000 !important;
+      border-radius:50% !important;
+      color:#fff !important;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .is-today{
+      background-color: #F12C8D !important;
+      width:35px;
+      height:33px;
+      left:38%;
+      top:2%;
+      display:none;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num{
+      //color:white !important;
+      font-weight:200;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item.today .date-num{
+      //color:white !important;
+      font-weight:900;
+    }
+    &.__vev_calendar-wrapper .arrow-left.icon{
+      left:33%;
+    }
+    &.__vev_calendar-wrapper .arrow-right.icon{
+      right:33%;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body{
+      background-color: #fff;
+    }
+    //近期活动的效果
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .is-event{
+      border:1px solid #FFADD6 !important;
+      border-color: #FFADD6 !important;
+      background-color: #FFADD6 !important;
+      left:30%;
+    }
+    &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item.event .date-num{
+      color:#fff !important;
+    }
+  }
+}
+
+  //移动端
+@media screen and (max-width:@device-width-mobile){
+  //隐藏横向滚动条
+  html,body{
+    overflow:hidden;
+    overflow-y: auto;
+  }
+  .container{
+    width:100%;
+    .pc{
+      display:none;
+    }
+    .mb{
+      display:block;
+    }
+    //轮播图动画样式
+    .my-swiper {
+          height: 7.58rem;
+          width: 100%;
+          .swiper-wrapper {
+            height: 7.58rem;
+          }
+          .swiper-slide {
+            display: flex;
+            overflow: hidden;
+            // 居中显示
+            justify-content: center;
+      
+            .swiper-img {
+              // 宽度 自动按比例(同高度的比例)缩放
+              width: auto;
+              height: 7.58rem;
+            }
+          }
+          .swiper-pagination {
+            // 覆盖 js 添加的内联样式 width
+            width: 100% !important;
+      
+            // Styles for indicators
+            > .swiper-pagination-bullet {
+              width: .4rem;
+              height: 3px;
+              border-radius: 0;
+              transition: all 0.6s;
+              background: rgba(255, 255, 255, 0.31);
+              cursor: pointer;
+              // <style lang="less" scoped> 下此条样式不会生效, 因为没有 [data-xxxxx] 属性
+              &.swiper-pagination-bullet-active {
+                background: #ffffff;
+              }
+            }
+            > .swiper-pagination-bullet:hover {
+              transform: scale(1.8);
+              height: 15px;
+              background-color: rgba(20, 200, 200, 0.8);
+            }
+          }
+    }
+    .fr-index{
+          width:100%;
+          height:auto;
+          margin:.4rem auto;
+          //padding:0 .25rem;
+          .fr-title,.fr-titleEn{
+            height:.4rem;
+            color:#3C4256;
+            padding-left:.6rem;
+            background:url(/images/Finwex-index/mobile/left.png) no-repeat;
+            background-size:4%;
+            background-position:12px bottom;
+            h2{
+              font-size:20px;
+              font-family: PingFangSC-Semibold;
+              letter-spacing: 1px;
+              font-weight:550;
+            }
+            .more-index{
+              width:2.2rem;
+              height:.4rem;
+              padding-top:0;
+              margin-right:.3rem;
+              span{
+                width:1.2rem;
+                font-family: PingFangSC-Regular;
+                font-size: 11px;
+                color: #3C4256;
+              }
+              .more-bg{
+                width:.66rem;
+              }
+            }
+            .more-index::after{
+              background:none;
+            }
+          }
+          .index-number{
+            margin:0 auto;
+            flex-direction: column;
+            width:94%;
+            height:auto;
+            margin-top:.35rem;
+            box-shadow: 0 2px 15px 0 rgba(0,0,0,0.11);
+            //padding:0 .25rem;
+            .index-num1{
+              display:flex;
+              width:100%;
+              .num1{
+                flex:1;
+                //width:100%;
+                background-color: #F9F9F9;
+                font-family: HelveticaNeue-Bold;
+                font-size: 15px;
+                color: #3C4256;
+                height:1.05rem;
+                padding:.22rem .17rem 0 .39rem;
+                //box-shadow: inset 1px -1px 10px 1px #ccc;
+                .num22{
+                  display:flex;
+                  font-family: HelveticaNeue-Medium;
+                  font-weight:500;
+                  span{
+                    flex:1;
+                  }
+                  .arrow{
+                    flex:2;
+                  }
+                }
+              }
+              .num2{
+                flex:1;
+                background-color: #fff !important;
+                border-top:.1rem solid #F12C8D;
+                border-left:none;
+                height:1.05rem;
+                padding:.12rem .17rem 0 .39rem;
+                box-shadow:none;
+              }
+            }
+            h4{
+              font-family: HelveticaNeue;
+              font-size: 12px;
+              color: #3C4256;
+              padding:.35rem 0 .23rem 0;
+              padding-left:.39rem;
+            }
+            .index-chart{
+              flex:6;
+              margin-top:.5rem;
+              // 覆盖图表组件内部样式
+              .echarts {
+                width: 100%;
+                //height: 200px;
+                padding-top:10px;
+              }
+              .chart{
+                width:100%;
+                padding:0;
+              }
+            }
+          }
+    }
+    .plan{
+      width:100%;
+      padding:.6rem 0 1rem 0;
+      margin:0 auto;
+      background-color: #fff;
+      .plan-h2{
+        color:#3C4256;
+        font-family: PingFangSC-Semibold;
+        font-weight:550;
+        font-size:20px;
+        text-align: left;
+        padding-left:.6rem;
+        background:url(/images/Finwex-index/mobile/left.png) no-repeat;
+        background-size:4%;
+        background-position:12px bottom;
+      }
+      .calendar{
+        width:100%;
+        margin:.35rem auto;
+        display:flex;
+        flex-direction: column;
+        .calendar-new{
+          &.__vev_calendar-wrapper{
+            width:7.06rem;
+            margin:0 auto;
+            z-index:999;
+            box-shadow: none;
+            border-bottom:1px solid #D7D7D7;
+          }
+          &.__vev_calendar-wrapper .cal-wrapper{
+            //width:70%;
+            padding:0;
+            width:100%;
+            //background-color: rgba(42, 41, 41, .04);
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-header{
+            background-color: rgba(42, 41, 41, .02);
+            padding-bottom:0;
+            .title{
+              color:#A0A0A0;
+              padding:0;
+              padding-top:17px;
+              padding-bottom:5px;
+            }
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body{
+            background-color: rgba(42, 41, 41, .02);
+            padding-bottom:.3rem;
+            .weeks{
+              font-size:16px;
+              color:#A0A0A0;
+              padding-left:.3rem;
+            }
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num{
+            font-size:16px;
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item{
+            width:14%;
+            padding-left:5px;
+            height:.8rem;
+            line-height:.8rem;
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .weeks .item{
+            width:14%;
+            text-align: left;
+            padding-left: 5px;
+            line-height: 30px;
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num{
+            height: 35px;
+            width:35px;
+            top: 4px;
+            left: 2px;
+            line-height: 37px;
+          }
+          
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num:hover{
+            cursor: pointer;
+            height: 35px;
+            width:35px;
+            top: 6px;
+            left: 2px;
+            line-height: 37px;
+            background-color: #F12C8D !important;
+            border-radius:50% !important;
+            color:#fff !important;
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .is-today{
+            background-color: #F12C8D !important;
+            width:35px;
+            height:33px;
+            left:38%;
+            top:2%;
+            display:none;
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num{
+            //color:white !important;
+            font-weight:200;
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item.today .date-num{
+            //color:white !important;
+            font-weight:900;
+          }
+          &.__vev_calendar-wrapper .arrow-left.icon{
+            left:33%;
+          }
+          &.__vev_calendar-wrapper .arrow-left.icon:before{
+            left:-90px;
+            border-top: 1px solid #A0A0A0;
+            border-right: 1px solid #A0A0A0;
+          }
+          &.__vev_calendar-wrapper .arrow-right.icon{
+            right:32%;
+          }
+          &.__vev_calendar-wrapper .arrow-right.icon:before{
+            right:-89px;
+            border-top: 1px solid #A0A0A0;
+            border-right: 1px solid #A0A0A0;
+          }
+          //近期活动的效果
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .is-event{
+            width:35px;
+            //height:35px;
+            border:1px solid #FFADD6 !important;
+            border-color: #FFADD6 !important;
+            background-color: #FFADD6 !important;
+            left:29%;
+            top:59%;
+            margin-left:-8px;
+          }
+          .selected-day>p{
+            //height: 35px;
+            width:35px;
+            top: 6px;
+            left: 2px;
+            line-height: 35px;
+            background-color: #F12C8D !important;
+            border-radius:50% !important;
+            color:#fff !important;
+          }
+          &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item.event .date-num{
+            color:#fff !important;
+          }
+        }
+        .plan-activity{
+          width:7.06rem;
+          height:auto;
+          padding:.27rem 0 0 0;
+          box-shadow: none;
+          margin:0 auto;
+          color:#272E44;
+          background-color: rgba(42, 41, 41, .02);
+          .plan-wrapper{
+            padding-left:.27rem;
+            height:auto;
+            padding-bottom:.3rem;
+            //移动端删除滚动条
+            overflow-y:visible;
+            .popular{
+              padding-top:10px;
+            }
+            .today1{
+              h2{
+                font-size:14px;
+              }
+              .line{
+                padding:.2rem .2rem .2rem .35rem;
+                margin-left:.47rem;
+                h1,h2,p{
+                  font-size:12px;
+                }
+              }
+              .line::before{
+                left:-3px;
+                top:27px;
+              }
+              .top-wrap{
+                .line{
+                  padding:.23rem .2rem .2rem .35rem;
+                  margin-left:.47rem;
+                  width:5.5rem;
+                  position: relative;
+                }
+                .line::before{
+                  left:-3px;
+                  top:18px;
+                }
+              }
+            } 
+          }
+          .contact{
+            padding-left:.27rem;
+            font-family: PingFangSC-Medium;
+            background-color: #fff;
+            h2{
+              font-size:12px;
+            }
+            span{
+              font-size:12px;
+              font-family: HelveticaNeue-Light;
+            }
+          }
+          .contact::before{
+            background: none;
+          }
+          &.plan-activity::after{
+            display: none;
+          }
+        }
+        &.calendar .today1::after{
+          width:6.5rem;
+          height:1px;
+          background-color: #E8E8EA;
+        }
+        
+        .contact::before{
+          width:6.5rem;
+          height:1px;
+          background-color: #E8E8EA;
+        }
+        .popular,.contact{
+          .line{
+            padding:.25rem .2rem 0 .35rem;
+            margin-left:.47rem;
+            width:5.5rem;
+            position: relative;
+            h2{
+              font-size:12px;
+            }
+            p{
+              font-size:12px;
+            }
+          }
+          .line::before{
+            content:'';
+            width:10px;
+            height:10px;
+            border-radius:50%;
+            background-color:#F12C8D;
+            position: absolute;
+            left:-3px;
+            top:18px;
+          }
+        }
+        
+
+      }
+    }
+    .new,.newEn{
+      width:100%;
+      .fr-title{
+        height:.4rem;
+        color:#3C4256;
+        padding-left:.6rem;
+        background:url(/images/Finwex-index/mobile/left.png) no-repeat;
+        background-size:4%;
+        background-position:12px bottom;
+        margin-right:.3rem;
+        h2{
+          font-size:20px;
+          font-family: PingFangSC-Semibold;
+        }
+        .more-index{
+          width:2rem;
+          height:.4rem;
+          padding-top:0;
+          span{
+            width:1.2rem;
+            font-family: PingFangSC-Regular;
+            font-size: 11px;
+            color: #3C4256;
+          }
+          .more-bg{
+            width:.66rem;
+          }
+        }
+        .more-index::after{
+          background:none;
+        }
+      }
+      .new-Sum{
+        margin:.42rem auto;
+        flex-direction: column;
+        .new-des{
+          margin:0 auto;
+          height:auto;
+          margin-bottom:.5rem;
+          box-shadow:none;
+          img{
+            height:4.5rem;
+            margin: 0 auto;
+          }
+          .new-detail{
+            margin: .2rem auto;
+            width:100%;
+            h3{
+              font-size: 16px;
+            }
+            span{
+              line-height: .5rem;
+              font-size:11px;
+            }
+            span::before{
+              width: 2.3rem;
+              height:2px;
+            }
+            .des1{
+              font-size:12px;
+              margin-top:13px;
+              height: 1.2rem;
+              line-height:17px;
+            }
+            a{
+              margin:0;
+              margin-top:10px;
+              margin-bottom:10px;
+            }
+          }
+        }
+      }
+    }
+    .partner{
+      height:auto;
+      padding:0;
+      padding-top:.5rem;
+      h2{
+        color:#2A2929;
+        font-size:20px;
+        font-family: PingFangSC-Semibold;
+      }
+      .partner-list{
+        width:100%;
+        height:auto;
+        flex-wrap: wrap;
+        margin:0 auto;
+        margin-top:.5rem;
+        .partner-item{
+          width:2.1rem;
+          height:.8rem;
+          margin-bottom:.8rem;
+          img{
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width:416px) and (min-width:380px){
+  .container{
+    .plan .calendar{
+      .calendar-new{
+        &.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num{
+          height: 35px;
+          width:35px;
+          top: 6px;
+          left: 2px;
+          line-height: 37px;
+        }
+      }
+    }
+  }
+}
+

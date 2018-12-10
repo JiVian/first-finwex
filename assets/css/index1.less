@@ -1,0 +1,725 @@
+@import "./variables.less";
+
+.container{
+  .pc{
+    display:block;
+  }
+  .mb{
+    display:none;
+  }
+  //PC端样式
+  .head-bg{
+    height:224px;
+    //background-color: skyblue;
+    background: url('/images/Finwex-index/indexNew.png');
+    margin:0 auto;
+    text-align: center;
+    h1{
+      padding-top:61px;
+      font-family: 600;
+      font-size: 48px;
+      color: #323232;
+    }
+    p{
+      padding-top:11px;
+      font-size: 30px;
+      color: #323232;
+      letter-spacing: 0px;
+      font-family: SourceHanSansCN-Normal;
+    }
+  }
+  .content{
+    display:flex;
+    width:1300px;
+    margin:45px auto;
+    .content-leftEn{
+      flex:2;
+      height:323px;
+      background-color:#F9F9F9;
+      .num{
+        width:349px;
+        height:126px;
+        padding:25px 25px 10px 25px;
+        color: #272E44;
+        
+        cursor: pointer;
+        .num1-title{
+          display:flex;
+          font-size: 24px;
+          margin-bottom:15px;
+          font-weight:550;
+          color: #272E44;
+          
+          h2{
+            flex:1;
+          }
+          .down-per{
+            width:150px;
+            padding-left:15px;
+            color:#E73232;
+            background: url("/images/Finwex-index/arrow7.png") no-repeat;
+            background-position:right;
+            background-size:6%;
+          }
+          .up-per{
+            width:150px;
+            padding-left:15px;
+            color:#2DCB6A;
+            background: url("/images/Finwex-index/arrow5.png") no-repeat;
+            background-position:right;
+            background-size:6%;
+          }
+        }
+        p{
+          font-family: PingFangSC-Regular;
+          font-size: 13px;
+          color: #8B97A3;
+          line-height: 22px;
+        }
+      }
+      //鼠标点击的样式
+      .numActive{
+        width:350px;
+        border:0;
+        background-color: #fff;
+        box-shadow: 0 2px 15px 5px rgba(158, 126, 255, .12);
+        z-index:999;
+      }
+      .num:hover{
+        background: #fff;
+        box-shadow: 0 2px 11px 0 rgba(138,118,197,0.30);
+      }
+      
+    }
+    .content-left{
+      flex:2;
+      height:267px;
+      background-color:#F9F9F9;
+      .num{
+        width:349px;
+        padding:25px;
+        color: #272E44;
+        cursor: pointer;
+        .num1-title{
+          display:flex;
+          font-size: 24px;
+          margin-bottom:15px;
+          font-weight:550;
+          color: #272E44;
+          
+          h2{
+            flex:1;
+          }
+          .down-per{
+            width:150px;
+            padding-left:15px;
+            color:#E73232;
+            background: url("/images/Finwex-index/arrow7.png") no-repeat;
+            background-position:right;
+            background-size:6%;
+          }
+          .up-per{
+            width:150px;
+            padding-left:15px;
+            color:#2DCB6A;
+            background: url("/images/Finwex-index/arrow5.png") no-repeat;
+            background-position:right;
+            background-size:6%;
+          }
+        }
+        p{
+          font-family: PingFangSC-Regular;
+          font-size: 13px;
+          color: #8B97A3;
+          line-height: 22px;
+        }
+      }
+      //鼠标点击的样式
+      .numActive{
+        width:350px;
+        border:0;
+        background-color: #fff;
+        box-shadow: 0 2px 15px 5px rgba(158, 126, 255, .12);
+        z-index:999;
+      }
+      .num:hover{
+        background: #fff;
+        box-shadow: 0 2px 11px 0 rgba(138,118,197,0.30);
+      }
+      
+    }
+    .content-right{
+      flex:5;
+      margin-left:40px;
+      padding-top:6px;
+      .num2-title{
+        display:flex;
+        width:800px;
+        font-size: 30px;
+        margin-bottom:10px;
+        font-weight:550;
+        color: #272E44;
+        h2{
+          flex:1;
+          font-family: PingFangSC-Medium;
+          font-weight:550;
+          font-size: 26px;
+          color: #272E44;
+        }
+        span{
+          color: #272E44;
+        }
+        .up-per{
+          width:125px;
+          padding-left:20px;
+          padding-top:10px;
+          font-size: 18px;
+          color:#2DCB6A;
+          font-weight:550;
+          background: url("/images/Finwex-index/arrow5.png") no-repeat;
+          background-position:100% 75%;
+          background-size:8%;
+          vertical-align:bottom;
+        }
+        .down-per{
+          font-family: HelveticaNeue-Medium;
+          width:125px;
+          padding-left:20px;
+          padding-top:10px;
+          font-size: 18px;
+          color:#E73232;
+          font-weight:550;
+          background: url("/images/Finwex-index/arrow7.png") no-repeat;
+          background-position:100% 75%;
+          background-size:8%;
+          vertical-align:bottom;
+        }
+      }
+      .subtitle{
+        display:flex;
+        width:330px;
+        position: relative;
+        color: #272E44;
+        span{
+          flex:1;
+          text-align: center;
+          font-size: 14px;
+          line-height:45px;
+          padding:0 10px;
+          cursor: pointer;
+        }
+        //鼠标点击的样式
+        .span-active{
+          color:#5A2DE2;
+          border-bottom:2px solid #5A2DE2;
+          z-index:999;
+        }
+      }
+      .subtitle::after{
+        content:"";
+        width:800px;
+        height:1px;
+        background-color: #D5CEEC;
+        position: absolute;
+        bottom:0;
+      }
+      .chartType{
+        padding-top:20px;
+        .feature{
+          margin-bottom:40px;
+          color:#272E44;
+          li{
+            width:492px;
+            height:46px;
+            background-color: #fff;
+            list-style: none;
+            padding:0 20px;
+            line-height:46px;
+            display:flex;
+            font-size:14px;
+            h2{
+              flex:1;
+            }
+          }
+          li:nth-child(2n-1){
+            background-color: #F6F3FF;
+          }
+          .feature-p{
+            padding-top:8px;
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: rgba(39,46,68,0.50);
+          }
+        }
+      }
+
+      .con-pdf{
+        display:flex;
+        width:400px;
+        margin-top:10px;
+        span{
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+        }
+        .pdf{
+          color: #5A2DE2;
+          text-decoration: none;
+          font-size: 14px;
+          margin-left:14px;
+        }
+      }
+      .con-des{
+        width:775px;
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+        color: #989CA5;
+        line-height: 18px;
+        margin-top:10px;
+      }
+      .contact{
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+        color: #989CA5;
+        line-height: 18px;
+        margin-top:10px;
+        span{
+          font-size: 12px;
+          color: #5A2DE2;
+          line-height: 18px;
+        }
+      }
+      .news{
+        //width:90px;
+        font-size: 14px;
+        color: #5A2DE2;
+        line-height:38px;
+        text-align: left;
+        // border-bottom:2px solid #5A2DE2;
+        margin-top:15px;
+        position: relative;
+        p{
+          display: inline-block;
+          padding:0 20px;
+          border-bottom:2px solid #5A2DE2;
+        }
+
+      }
+      .news::after{
+        content:"";
+        width:700px;
+        height:2px;
+        background-color: #D5CEEC;
+        position: absolute;
+        bottom:0px;
+        left:88px;
+        z-index:-1;
+      }
+      .new-des{
+        display:flex;
+        width:700px;
+        .des1{
+          flex:1;
+          height:40px;
+          padding:15px 0;
+
+          border-bottom:1px solid #ccc;
+          margin-right:80px;
+          p{
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #414141;
+            padding-bottom:5px;
+          }
+          span{
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+}
+//移动端
+@media screen and (max-width:@device-width-mobile){
+  .container{
+    .pc{
+      display:none;
+    }
+    .mb{
+      display:block;
+    }
+    .head-bg,.head-bgEn{
+      height:3.2rem;
+      //background-color: skyblue;
+      background: url('/images/Finwex-index/mobile/indexMb.png');
+      background-position: center;
+      background-size: contain;
+      margin:0 auto;
+      text-align: center;
+      h1{
+        padding-top:61px;
+        font-family: 600;
+        font-size: 48px;
+        color: #323232;
+      }
+      p{
+        padding-top:11px;
+        font-size: 30px;
+        color: #323232;
+        letter-spacing: 0px;
+        font-family: SourceHanSansCN-Normal;
+      }
+    }
+    .head-bgEn{
+      background: url('/images/Finwex-index/mobile/indexMb_En.png');
+      background-position: center;
+      background-size: contain;
+      margin:0 auto;
+      text-align: center;
+    }
+    .content{
+      width:100%;
+      margin:.46rem auto;
+      display:flex;
+      flex-direction: column;
+      .content-left{
+        height:.87rem;
+        background-color:#F9F9F9;
+        .num{
+          width:349px;
+          padding:25px;
+          color: #272E44;
+          
+          cursor: pointer;
+          .num1-title{
+            display:flex;
+            font-size: 24px;
+            margin-bottom:15px;
+            font-weight:550;
+            color: #272E44;
+            
+            h2{
+              flex:1;
+            }
+            .down-per{
+              width:150px;
+              padding-left:15px;
+              color:#E73232;
+              background: url("/images/Finwex-index/arrow7.png") no-repeat;
+              background-position:right;
+              background-size:6%;
+            }
+            .up-per{
+              width:150px;
+              padding-left:15px;
+              color:#2DCB6A;
+              background: url("/images/Finwex-index/arrow5.png") no-repeat;
+              background-position:right;
+              background-size:6%;
+            }
+          }
+          p{
+            font-family: PingFangSC-Regular;
+            font-size: 13px;
+            color: #8B97A3;
+            line-height: 22px;
+          }
+        }
+        //鼠标点击的样式
+        .numActive{
+          width:350px;
+          border:0;
+          background-color: #fff;
+          box-shadow: 0 2px 15px 5px rgba(158, 126, 255, .12);
+          z-index:999;
+        }
+        .num:hover{
+          background: #fff;
+          box-shadow: 0 2px 11px 0 rgba(138,118,197,0.30);
+        }
+        
+      }
+      .index-number{
+        margin:0 auto;
+        flex-direction: column;
+        width:100%;
+        height:auto;
+        //padding:0 .25rem;
+        .index-num1{
+          display:flex;
+          width:100%;
+          .num1{
+            flex:1;
+            //width:100%;
+            background-color: #F9F9F9;
+            font-family: HelveticaNeue-Medium;
+            font-size: 18px;
+            color: #3C4256;
+            height:.87rem;
+            line-height:.87rem;
+            text-align: center;
+            font-weight:550;
+            //box-shadow: inset 1px -1px 10px 1px #ccc;
+            .num22{
+              display:flex;
+              font-family: HelveticaNeue-Medium;
+              font-weight:500;
+              span{
+                flex:1;
+              }
+              .arrow{
+                flex:2;
+              }
+            }
+          }
+          .num2{
+            flex:1;
+            background-color: #fff !important;
+            border-top:.1rem solid #5A2DE2;
+            border-left:none;
+            height:.74rem;
+            line-height:.74rem;
+            box-shadow:none;
+          }
+        }
+        h4{
+          font-family: HelveticaNeue;
+          font-size: 12px;
+          color: rgba(39,46,68,0.50);
+          padding:.16rem 0 .23rem .54rem;
+        }
+        
+      }
+      .content-right{
+        margin-left:0;
+        //padding:0 .54rem;
+        .num2-title{
+          display:flex;
+          width:89%;
+          font-size: 30px;
+          font-weight:550;
+          color: #272E44;
+          padding-left: .54rem;
+          margin-bottom: .4rem;
+          h2{
+            flex:1;
+            font-family: PingFangSC-Medium;
+            font-weight:550;
+            font-size: 26px;
+            color: #272E44;
+          }
+          span{
+            color: #272E44;
+          }
+          .up-per{
+            font-family: Helvetica;
+            width:125px;
+            padding-left:20px;
+            padding-top:14px;
+            font-size: 13px;
+            color:#2DCB6A;
+            font-weight:530;
+            background: url("/images/Finwex-index/arrow5.png") no-repeat;
+            background-position:73% 80%;
+            background-size:6%;
+            vertical-align:bottom;
+          }
+          .down-per{
+            font-family: Helvetica;
+            width:125px;
+            padding-left:20px;
+            padding-top:14px;
+            font-size: 13px;
+            color:#E73232;
+            font-weight:530;
+            background: url("/images/Finwex-index/arrow7.png") no-repeat;
+            background-position:73% 80%;
+            background-size:6%;
+            vertical-align:bottom;
+          }
+        }
+        .chartType{
+          width:86%;
+          padding: 0;
+          margin-left:.54rem;
+          .index-chart{
+            .chart{
+              .chart-frame{
+                .echarts{
+                  width:86%;
+                }
+              }
+            }
+          }
+        }
+        .subtitle{
+          display:flex;
+          width:89%;
+          position: relative;
+          color: #272E44;
+          background-color: #F5F5F5;
+          padding:0 .4rem;
+          span{
+            flex:1;
+            text-align: center;
+            font-size: 14px;
+            line-height:45px;
+            padding:0 10px;
+            cursor: pointer;
+            color:rgba(39,46,68,0.75);
+          }
+          //鼠标点击的样式
+          .span-active{
+            color:#5A2DE2;
+            border-bottom:2px solid #5A2DE2;
+            z-index:999;
+          }
+        }
+        .subtitle1{
+          display:flex;
+          width:89%;
+          position: relative;
+          color: #272E44;
+          background-color: #F5F5F5;
+          padding:0 .4rem;
+          span{
+            flex:1;
+            text-align: center;
+            font-size: 12px;
+            line-height:40px;
+            padding:0 10px;
+            cursor: pointer;
+            color:rgba(39,46,68,0.75);
+          }
+          //鼠标点击的样式
+          .span-active{
+            color:#5A2DE2;
+            border-bottom:2px solid #5A2DE2;
+            z-index:999;
+          }
+        }
+        .subtitle::after{
+          width:0;
+        }
+        .con-pdf{
+          display:flex;
+          flex-wrap: wrap;
+          width:86%;
+          margin-top:0;
+          padding:.48rem 0 0 .54rem;
+          p{
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color:#272E44;
+            margin-right:.2rem;
+            margin-bottom:.1rem;
+          }
+          .pdf{
+            color: #5A2DE2;
+            text-decoration: none;
+            font-size: 14px;
+            margin-left:0;
+            //line-height:30px;
+          }
+        }
+        .feature{
+          padding:.24rem;
+          margin-bottom:0;
+          color:#272E44;
+          li{
+            width:90%;
+            height:.8rem;
+            background-color: #fff;
+            list-style: none;
+            padding:0 .3rem;
+            line-height:.8rem;
+            display:flex;
+            font-size:14px;
+            color:#272E44;
+            h2{
+              flex:1;
+            }
+          }
+          li:nth-child(2n-1){
+            background-color: #F6F3FF;
+          }
+          .feature-p{
+            padding-top:8px;
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: rgba(39,46,68,0.50);
+          }
+        }
+        .con-des{
+          width:82%;
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          color: #31384D;
+          line-height: 22px;
+          margin-top:.25rem;
+          padding-left:.54rem;
+        }
+        .contact{
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          color:#31384D;;
+          line-height: 20px;
+          margin-top:.4rem;
+          padding-left:.54rem;
+          width:90%;
+          span{
+            font-size: 14px;
+            color: #5A2DE2;
+            line-height: 20px;
+          }
+        }
+        .news{
+          width:90px;
+          font-size: 14px;
+          color: #5A2DE2;
+          line-height:38px;
+          text-align: center;
+          border-bottom:2px solid #5A2DE2;
+          margin-top:15px;
+          position: relative;
+        }
+        .news::after{
+          content:"";
+          width:730px;
+          height:2px;
+          background-color: #D5CEEC;
+          position: absolute;
+          bottom:-2px;
+          left:88px;
+        }
+        .new-des{
+          display:flex;
+          width:86%;
+          flex-direction: column;
+          padding:0 0 0 .6rem;
+          .des1{
+            flex:1;
+            height:.8rem;
+            border-bottom:1px solid #ECECEC;
+            margin-right:0;
+            padding:.4rem 0;
+            padding-right:.6rem;
+            p{
+              font-family: PingFangSC-Regular;
+              font-size: 15px;
+              color: #414141;
+              padding-bottom:.2rem;
+              letter-spacing: 1px;
+            }
+            span{
+              font-family: PingFangSC-Regular;
+              font-size: 12px;
+              color: #999999;
+            }
+          }
+        }
+      }
+    }
+  }
+}

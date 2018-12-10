@@ -1,0 +1,120 @@
+@import "./variables.less";
+//PC端
+.container1{
+  width:800px;
+  margin:22px auto;
+ // background-color: white;
+  //PC端样式
+  .new-title{
+    margin:20px 0;
+    h1{
+      font-size:32px;
+      font-weight:550;
+      //height:90px;
+      line-height:45px;
+      padding-bottom:10px;
+      margin-bottom:20px;
+      color: #333;
+      position: relative;
+    }
+    h1::before{
+      content:"";
+      width:170px;
+      height:4px;
+      background: #F5B514;
+      position: absolute;
+      bottom:0;
+      left:0;
+    }
+    span{
+      font-family: HelveticaNeue-Medium;
+      font-size: 14px;
+      color: #777;
+      padding-top:20px;
+    }
+  }
+ 
+  .new-des{
+    width:100%;
+    word-wrap: break-word;
+    word-break: break-all;
+    img{
+      width:800px;
+    }
+    p{
+      width:100%;
+      font-size: 16px;
+      color: #444;
+      line-height: 26px;
+      font-weight:200;
+      margin:15px 0;
+      img{
+        width:800px;
+      }
+    }
+    h2{
+      text-align: center;
+      line-height:22px;
+      font-size:14px;
+      color:#A9A9A9;
+    }
+    h4{
+      text-align: center;
+    }
+    h3{
+      font-size:20px;
+      text-align: center;
+    }
+    .link{
+      line-height:40px;
+    }
+    a{
+      list-style: none;
+      text-decoration: none;
+    }
+    span{
+      font-size: 24px;
+      line-height:24px;
+    }
+  }
+}
+//移动端
+@media screen and(max-width:@device-width-mobile){
+  .container1{
+    width:90%;
+    //padding:.25rem;
+    margin:0 auto;
+    .new-title{
+      margin:0;
+      padding-top:.3rem;
+      h1{
+        font-size:22px;
+        line-height:30px;
+        margin-bottom:10px;
+      }
+    }
+    .new-des{
+      width:100%;
+      margin-top:.2rem;
+      p{
+        font-size:15px;
+        line-height:22px;
+        img{
+          width:99%;
+          height:auto;
+        }
+      }
+      img{
+        width:99%;
+        height:auto;
+      }
+      .new-img{
+        width:100%;
+      }
+      .link{
+        line-height:20px;
+        margin-top:.4rem;
+      }
+    }
+  }
+}

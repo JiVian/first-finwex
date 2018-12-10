@@ -1,0 +1,17 @@
+@import "../variables";
+
+// Container
+.container {
+  margin: 0 auto;
+  &.full {
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width: @device-width-mobile) {
+  .container {
+    &.full {
+      width: 100%;
+    }
+  }
+}

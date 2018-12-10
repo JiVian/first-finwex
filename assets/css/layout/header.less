@@ -1,0 +1,364 @@
+@import "../variables";
+
+@header-height: 70px;
+
+// 导航栏
+//pc端
+.nav-header {
+  background: #2B2B2B;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  height: @header-height;
+  position: relative;
+  z-index: 1000;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: @header-height;
+
+    .logo {
+      text-indent: -1000em;
+    }
+
+    .header-nav-toggle {
+      display: none;
+    }
+
+    .header-nav-menu {
+      display: flex;
+      font-size: 14px;
+      line-height: 20px;
+
+      .nav-menu-item {
+        position: relative;
+
+        .nav-sub-menu {
+          position: absolute;
+          top: 55px;
+          left: -40px;
+          right: -40px;
+          background: #ffffff;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height .2s ease-out;
+
+          > .nav-sub-menu-item,
+          > .nav-sub-menu-item > a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            color: #333;
+            line-height: 35px;
+
+          }
+
+          > .nav-sub-menu-item {
+            border-top: 1px solid #e2e2e2;
+
+            &:hover {
+              background: #e2e2e2;
+            }
+          }
+        }
+
+        &:hover {
+          > a::before {
+            max-width: 200px;
+          }
+
+          .nav-sub-menu {
+            max-height: 500px;
+          }
+        }
+      }
+
+      .nav-menu-item > .nav-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 22px;
+        display: block;
+        font-weight: bold;
+
+        &.pc-only {
+          display: block;
+        }
+
+        &.wap-only {
+          display: none;
+        }
+
+        &.home.exact-active-link::after,
+        &:not(.home).active-link::after {
+          content: '';
+          position: absolute;
+          bottom: 1px;
+          left: 9px;
+          right: 9px;
+          height: 3px;
+          background: #fff;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 1.5px;
+          left: 9px;
+          right: 9px;
+          height: 1px;
+          max-width: 0;
+          background: #fff;
+          transition: max-width .5s ease-in-out;
+        }
+      }
+
+      // 语言栏
+      .lang-box {
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        margin-left: 40px;
+        .lang-sep{
+          color:white;
+        }
+        .lang-link.nav-link {
+          padding: 10px 5px;
+          cursor: pointer;
+          font-size:12px;
+          font-weight:400;
+
+          &.active {
+            font-weight: @font-weight-bold;
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+//移动端
+@media screen and (max-width: @device-width-mobile) {
+  .nav-header {
+    height: 1rem;
+    .container {
+      height: 1rem;
+      padding: 0 .25rem;
+      position: relative;
+      .header-nav-menu {
+        background: rgba(36,36,36,0.95);
+        position: absolute;
+        z-index: 1000;
+        top: 1rem;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        box-sizing: border-box;
+        line-height: .9rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .2s ease-out;
+
+        &.open {
+          max-height: 20rem;
+        }
+
+        .nav-menu-item {
+          flex: 0 0 .9rem;
+          font-size: .3rem;
+          color: #ffffff;
+          //padding: 0 .3rem;
+          position: relative;
+          font-weight: @font-weight-light;
+          &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: .1rem;
+            right: .1rem;
+            border-bottom: 1px dotted rgba(255, 255, 255, .3);
+          }
+
+          // TODO: 子菜单移动端样式;
+          .nav-sub-menu {
+            position: sticky;
+            top: 0;
+            background: transparent;
+            > .nav-sub-menu-item,
+            > .nav-sub-menu-item > a {
+              font-size: .28rem;
+              color: #ffffff;
+              width:100%;
+              border-bottom: 1px dotted rgba(255, 255, 255, .3);
+            }
+
+            > .nav-sub-menu-item {
+              border-top: none;
+              margin: 0 auto;
+            }
+            > .nav-sub-menu-item:hover{
+              background:transparent;
+            }
+          }
+
+          &:hover {
+            .nav-sub-menu {
+              max-height: 0;
+            }
+          }
+
+          &.open {
+
+            .wap-only{
+              background-color:rgba(0,0,0,.6);
+            }
+            .nav-sub-menu {
+              max-height: 20rem;
+              //padding-bottom:.2rem;
+              background-color:rgba(0,0,0,.6);
+            }
+
+          }
+        }
+
+        .nav-menu-item > .nav-link {
+          text-align: center;
+          color: #ffffff;
+          padding: 0;
+
+          &.pc-only {
+            display: none;
+          }
+
+          &.wap-only {
+            display: block;
+          }
+        }
+
+        // 语言栏
+        .lang-box {
+          justify-content: center;
+          margin-left:0;
+        }
+      }
+
+      .header-nav-toggle {
+        display: block;
+        width: .64rem;
+        height: .64rem;
+      }
+    }
+  }
+}
+
+// 头部 LOGO
+.nav-header {
+  .logo {
+    &.finwex {
+      flex: 0 0 152px;
+      width: 152px;
+      height: 30px;
+      background-size: 152px 30px;
+      background-image: url('/images/logos/finwex-nav.png');
+    }
+    &.finwex-index {
+      flex: 0 0 230px;
+      //width: 239px;
+      width: 230px;
+      height: 30px;
+      background-size: 230px 30px;
+      background-image: url('/images/logos/header-index1.png');
+    }
+    &.finwex-institute {
+      flex: 0 0 275px;
+      width: 275px;
+      height: 30px;
+      background-size: 275px 30px;
+      background-image: url('/images/logos/header-institute1.png');
+    }
+    &.finwex-labs {
+      flex: 0 0 236px;
+      width: 236px;
+      height: 30px;
+      background-size: 236px 30px;
+      background-image: url('/images/logos/header-labs1.png');
+    }
+    
+    &.finwex-ratings {
+      flex: 0 0 273px;
+      width: 273px;
+      height: 30px;
+      background-size: 273px 30px;
+      background-image: url('/images/logos/header-ratings1.png');
+    }
+    // 大会 LOGO
+    &.finwise-summit {
+      flex: 0 0 230px;
+      width: 230px;
+      height: 30px;
+      background-size: 230px 30px;
+      background-image: url('/images/logos/header-summit1.png');
+    }
+    //新闻logo
+    &.finwise-news {
+      flex: 0 0 254px;
+      width: 254px;
+      height: 30px;
+      background-size: 254px 30px;
+      background-image: url('/images/logos/header-voice1.png');
+    }
+  }
+}
+
+@media screen and (max-width: @device-width-mobile) {
+  .nav-header {
+    .logo {
+      &.finwex {
+        flex: 0 0 2.03rem;
+        width: 2.03rem;
+        height: .4rem;
+        background-size: 2.03rem .4rem;
+      }
+      &.finwex-index {
+        flex: 0 0 3.19rem;
+        width: 3.19rem;
+        height: .4rem;
+        background-size: 3.19rem .4rem;
+      }
+      &.finwex-institute {
+        flex: 0 0 3.67rem;
+        width: 3.67rem;
+        height: .4rem;
+        background-size: 3.67rem .4rem;
+      }
+      &.finwex-labs {
+        flex: 0 0 3.15rem;
+        width: 3.15rem;
+        height: .4rem;
+        background-size: 3.15rem .4rem;
+      }
+      &.finwex-ratings {
+        flex: 0 0 3.64rem;
+        width: 3.64rem;
+        height: .4rem;
+        background-size: 3.64rem .4rem;
+      }
+      &.finwise-summit {
+        flex: 0 0 3.56rem;
+        width: 3.56rem;
+        height: .4rem;
+        background-size: 3.56rem .4rem;
+      }
+      &.finwise-news {
+        flex: 0 0 3.39rem;
+        width: 3.39rem;
+        height: .4rem;
+        background-size: 3.39rem .4rem;
+      }
+    }
+  }
+}

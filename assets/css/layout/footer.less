@@ -1,0 +1,242 @@
+@import "../variables";
+
+@footer-height: 70px;
+
+// 页脚
+.page-footer {
+  background: #2B2B2B;
+  padding-top: 48px;
+  padding-bottom: 23px;
+
+  &.transparent {
+    background: transparent;
+  }
+
+  .container {
+    width: 887px;
+
+    .logo {
+      text-indent: -1000em;
+    }
+
+    // 合作伙伴
+    .partner-list {
+      display: flex;
+      margin-top: 35px;
+      margin-bottom: 27px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .partner-item {
+        flex: 0 0 111px;
+        width: 111px;
+        height: 33px;
+
+        > a,
+        img {
+          display: block;
+          width: 111px;
+          height: 33px;
+        }
+      }
+    }
+
+    // 联系方式
+    .contact-methods {
+      border-top: 1px solid rgba(255,255,255,0.10);
+      padding-top: 35px;
+      display: flex;
+      justify-content: center;
+
+      .contact-item {
+        display: flex;
+        margin-right: 47px;
+        position: relative;
+
+        &.last {
+          margin-right: 0;
+        }
+
+        >a,
+        img {
+          display: block;
+          width: 25px;
+          height: 25px;
+        }
+
+        &.hoverable {
+          display: block;
+
+          .hover-pane {
+            background: #fff;
+            position: absolute;
+            display: none;
+            bottom: 35px;
+            width: 148px;
+            height: 148px;
+            left: -61.5px;
+            border-radius: 10px;
+
+            > img {
+              margin: 10px;
+              width: 128px;
+              height: 128px;
+            }
+          }
+
+          &:hover {
+            .hover-pane {
+              display: block;
+            }
+          }
+        }
+
+        &.clickable {
+          display: none;
+
+          .hover-pane {
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            background: rgba(0, 0, 0, .7);
+
+            > img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              margin: .1rem;
+              width: 5.12rem;
+              height: 5.12rem;
+            }
+          }
+        }
+      }
+    }
+
+    .emphasize {
+      color: #ffffff;
+    }
+
+    p.more,
+    p.copyright {
+      font-size: 12px;
+      line-height: 17px;
+      color: rgba(255,255,255,0.70);
+      text-align: center;
+    }
+
+    p.more {
+      margin-top: 35px;
+    }
+
+    p.copyright {
+      margin-top: 4px;
+    }
+
+  }
+}
+
+@media screen and (max-width: @device-width-mobile) {
+  .page-footer {
+    padding-top: .89rem;
+    padding-bottom: .45rem;
+    .container {
+      width: 100%;
+
+      // 合作伙伴
+      .partner-list {
+        margin-top: .89rem;
+        margin-bottom: .07rem;
+        padding: 0 .23rem;
+
+        .partner-item {
+          margin-bottom: .46rem;
+          width: 2.2rem;
+          height: .64rem;
+
+          > a,
+          img {
+            width: 2.2rem;
+            height: .64rem;
+          }
+        }
+      }
+
+      // 联系方式
+      .contact-methods {
+        padding: .77rem .77rem 0 .77rem;
+        justify-content: space-between;
+        border-top:0;
+        .contact-item {
+          margin-right: 0;
+
+          > a,
+          img {
+            width: .6rem;
+            height: .6rem;
+          }
+
+          &.hoverable {
+            display: none;
+          }
+
+          &.clickable {
+            display: block;
+          }
+        }
+      }
+
+      p.more,
+      p.copyright {
+        font-size: .22rem;
+      }
+
+      p.more {
+        margin-top: .89rem;
+      }
+
+      p.copyright {
+        margin-top: .14rem;
+      }
+    }
+  }
+}
+
+.page-footer {
+  .logo {
+    &.finwex {
+      display: block;
+      margin: 0 auto;
+      width: 152px;
+      height: 30px;
+      padding-right: 20px;
+      background: url("/images/logos/finwex-light.png") no-repeat;
+      background-size: 152px 30px;
+
+      &.finwex-home {
+        background: url('/images/Finwex-index/finwex.png') no-repeat;
+        width: 172px;
+        height: 34px;
+        background-size: 172px 34px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @device-width-mobile) {
+  .page-footer {
+    .logo {
+      &.finwex {
+        width: 3.1rem;
+        height: .6rem;
+        background-size: 3.1rem .6rem;
+      }
+    }
+  }
+}
