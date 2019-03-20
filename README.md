@@ -34,5 +34,3 @@ pages 首屏加载页面
 asset webpack管理的静态资源
 
 static web静态资源，这个生产环境会用CDN代替。
-
-其他的不重要，不懂的问周俊
